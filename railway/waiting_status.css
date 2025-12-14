@@ -1,0 +1,96 @@
+/* ===== Global ===== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #0a0f1f, #111827, #1e293b);
+  color: #f1f5f9;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== Main Card ===== */
+.container {
+  background: rgba(17, 24, 39, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  padding: 35px 45px;
+  width: 420px;
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.35);
+  text-align: center;
+  border: 1px solid #ffffff20;
+}
+
+/* ===== Headings ===== */
+h2 {
+  margin-bottom: 25px;
+  font-size: 26px;
+  color: #60a5fa;
+  letter-spacing: 1px;
+}
+
+/* ===== Paragraphs ===== */
+p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+p b {
+  color: #93c5fd;
+}
+
+/* ===== Status Colors ===== */
+.status-confirmed {
+  color: #22c55e;
+  font-weight: 700;
+}
+
+.status-waiting {
+  color: #facc15;
+  font-weight: 700;
+}
+
+.status-cancelled {
+  color: #ef4444;
+  font-weight: 700;
+}
+
+/* ===== Error Message ===== */
+.error {
+  color: #f87171;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+/* ===== Back Link ===== */
+a {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 10px 22px;
+  background: #3b82f6;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 0.3s ease;
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.6);
+}
+
+a:hover {
+  background: #60a5fa;
+  transform: translateY(-2px);
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 480px) {
+  .container {
+    width: 90%;
+    padding: 25px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+}

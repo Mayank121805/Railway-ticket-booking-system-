@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check Waiting List</title>
+  <link rel="stylesheet" href="waiting.css">
+</head>
+
+<body>
+
+<header>
+  <div class="header-content">
+    <img src="logo.jpg" class="train-logo">
+    <h1>Check Booking Status</h1>
+  </div>
+</header>
+
+<!-- ===== CHECK WAITING FORM ===== -->
+<section class="waiting-check">
+
+  <form action="../cgi-bin/waiting.cgi" method="POST" class="waiting-form">
+
+    <h2 class="check-title">🔎 Check Your Booking Status</h2>
+
+    <label>Enter Ticket Number</label>
+    <input type="text" name="ticket_id" placeholder="e.g. TCK12345" required>
+
+    <button type="submit" class="submit-btn">Check Status</button>
+
+    <a href="dashboard.html" class="back-btn">⬅ Back to Dashboard</a>
+
+
+  </form>
+
+</section>
+
+<footer>
+  © 2025 Railway Booking System | Designed by Mayank
+</footer>
+
+</body>
+</html>

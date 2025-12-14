@@ -1,0 +1,174 @@
+/* ==== General Page Styling ==== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #e6a69b, #bad2ee, #cfe2c5);
+  color: #333;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==== Header ==== */
+header {
+  background: linear-gradient(90deg, #5d1409, #b93912, #e09a2a);
+  padding: 15px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.train-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+header h1 {
+  font-size: 26px;
+  color: #ffffff;
+  letter-spacing: 1px;
+  margin: 0;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* ==== Form Section ==== */
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+}
+
+.signup-form {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(6px);
+  padding: 30px 40px;
+  border-radius: 18px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.signup-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ==== Input Fields ==== */
+.input-group {
+  margin: 15px 0;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #5d1409;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #b93912;
+  box-shadow: 0 0 8px rgba(185, 57, 18, 0.3);
+}
+
+/* ==== Buttons ==== */
+.signup-btn {
+  margin-top: 15px;
+  background: linear-gradient(135deg, #b93912, #e09a2a);
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.signup-btn:hover {
+  background: linear-gradient(135deg, #e09a2a, #b93912);
+  transform: scale(1.05);
+}
+
+/* ==== Back Button ==== */
+.back-btn {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #fff;
+  background: #5d1409;
+  padding: 10px 25px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.back-btn:hover {
+  background: #b93912;
+  transform: translateY(-3px);
+}
+
+/* ==== Footer ==== */
+footer {
+  background: #fff8ef;
+  color: #555;
+  padding: 15px 0;
+  font-size: 14px;
+  border-top: 1px solid #ddd;
+}
+
+/* ==== Mobile View ==== */
+@media (max-width: 600px) {
+  .train-logo {
+    width: 45px;
+    height: 45px;
+  }
+
+  header h1 {
+    font-size: 20px;
+  }
+
+  .signup-form {
+    width: 90%;
+    padding: 25px;
+  }
+
+  input {
+    font-size: 14px;
+  }
+
+  .signup-btn {
+    width: 100%;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+}

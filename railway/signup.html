@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup - Railway Booking</title>
+  <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <img src="logo.jpg" alt="Train" class="train-logo">
+      <h1>Signup - Railway Booking</h1>
+    </div>
+  </header>
+
+  <main>
+    <form action="/cgi-bin/signup.cgi" method="POST" class="signup-form">
+      <div class="input-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+
+      <div class="input-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+
+      <button type="submit" class="signup-btn">📝 Signup</button>
+    </form>
+
+    <a href="dashboard.html" class="back-btn">⬅ Back to Dashboard</a>
+  </main>
+
+  <footer>
+    <p>© 2025 Railway Booking System | Designed by Mayank</p>
+  </footer>
+</body>
+</html>

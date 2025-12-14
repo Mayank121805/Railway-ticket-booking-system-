@@ -1,0 +1,154 @@
+/* ==== Root Theme Variables (Same as Dashboard) ==== */
+:root {
+  --bg-gradient: linear-gradient(135deg, #0a0f1f, #111827, #1e293b);
+  --card-bg: rgba(17, 24, 39, 0.85);
+  --card-border: #ffffff20;
+  --text-light: #f1f5f9;
+  --accent: #3b82f6;
+  --accent-soft: #60a5fa;
+  --radius: 18px;
+  --transition: 0.3s ease;
+}
+
+/* ==== General Page Styling ==== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg-gradient);
+  color: var(--text-light);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* ==== Header ==== */
+header {
+  background: #0f172a80;
+  backdrop-filter: blur(10px);
+  padding: 18px 0;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.train-logo {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  object-fit: cover;
+}
+
+header h1 {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+  color: var(--text-light);
+}
+
+/* ==== Thank You Section ==== */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+/* ==== Thank You Card ==== */
+.thank-box {
+  background: var(--card-bg);
+  backdrop-filter: blur(14px);
+  padding: 40px 50px;
+  border-radius: var(--radius);
+  border: 1px solid var(--card-border);
+  max-width: 420px;
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.25);
+  transition: var(--transition);
+}
+
+.thank-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 40px rgba(59, 130, 246, 0.4);
+}
+
+.thank-box h2 {
+  color: var(--accent-soft);
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.thank-box p {
+  color: #d1d5db;
+  font-size: 16px;
+  margin-bottom: 22px;
+}
+
+/* ==== Button ==== */
+.back-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+  padding: 12px 32px;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: var(--transition);
+  box-shadow: 0 0 14px rgba(96, 165, 250, 0.6);
+}
+
+.back-btn:hover {
+  background: linear-gradient(135deg, var(--accent-soft), var(--accent));
+  transform: scale(1.05);
+  box-shadow: 0 0 22px rgba(96, 165, 250, 0.9);
+}
+
+/* ==== Footer ==== */
+footer {
+  background: #0f172a90;
+  border-top: 1px solid var(--card-border);
+  color: #cbd5f5;
+  padding: 15px 0;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+}
+
+/* ==== Mobile View ==== */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 20px;
+  }
+
+  .train-logo {
+    width: 45px;
+    height: 45px;
+  }
+
+  .thank-box {
+    width: 90%;
+    padding: 30px;
+  }
+
+  .thank-box h2 {
+    font-size: 20px;
+  }
+
+  .thank-box p {
+    font-size: 14px;
+  }
+
+  .back-btn {
+    width: 100%;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+}

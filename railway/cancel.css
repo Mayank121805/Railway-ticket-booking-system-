@@ -1,0 +1,178 @@
+/* ==== Base Layout & Background ==== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: var(--bg-gradient);
+  color: var(--text-light);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* ==== Theme Variables ==== */
+:root {
+  --bg-gradient: linear-gradient(135deg, #0a0f1f, #111827, #1e293b);
+  --card-bg: rgba(17, 24, 39, 0.75);
+  --card-border: rgba(255, 255, 255, 0.12);
+  --text-light: #f1f5f9;
+  --accent: #3b82f6;
+  --accent-soft: #60a5fa;
+  --radius: 14px;
+  --transition: 0.28s ease;
+}
+
+/* Light Mode */
+:root.light-mode {
+  --bg-gradient: linear-gradient(135deg, #f5f7fa, #dfe9f3);
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --text-light: #1f2937;
+  --card-border: rgba(0, 0, 0, 0.15);
+}
+
+/* Calm Mode */
+:root.calm-mode {
+  --bg-gradient: linear-gradient(135deg, #c9e7e2, #eaf7f3);
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --text-light: #2b3a42;
+  --card-border: rgba(0,0,0,0.12);
+}
+
+/* ==== Header ==== */
+header {
+  background: rgba(15, 23, 42, 0.6);
+  padding: 20px 0;
+  border-bottom: 1px solid #ffffff20;
+  backdrop-filter: blur(10px);
+}
+
+.header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.train-logo {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent);
+}
+
+header h1 {
+  font-size: 26px;
+  color: var(--text-light);
+  letter-spacing: 1px;
+}
+
+/* ==== Form Section ==== */
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* Glassmorphic Form Box */
+.cancel-form {
+  width: 350px;
+  padding: 30px 40px;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 20px rgba(0,0,0,0.45);
+  transition: var(--transition);
+}
+
+.cancel-form:hover {
+  box-shadow: 0 0 25px rgba(59,130,246,0.4);
+  transform: translateY(-3px);
+}
+
+/* ==== Input Fields ==== */
+.input-group {
+  margin: 18px 0;
+  text-align: left;
+}
+
+label {
+  font-weight: 600;
+  color: var(--accent-soft);
+  margin-bottom: 6px;
+  display: block;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  background: #1e293b;
+  border: 1px solid #334155;
+  color: white;
+  transition: var(--transition);
+}
+
+:root.light-mode input,
+:root.calm-mode input {
+  background: #e3e9ef;
+  color: #1f2937;
+}
+
+input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 12px rgba(59,130,246,0.4);
+}
+
+/* ==== Buttons ==== */
+.cancel-btn {
+  margin-top: 10px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 0 15px rgba(59,130,246,0.4);
+}
+
+.cancel-btn:hover {
+  background: var(--accent-soft);
+  transform: translateY(-2px);
+}
+
+/* Back button */
+.back-btn {
+  margin-top: 20px;
+  text-decoration: none;
+  padding: 10px 22px;
+  border-radius: 8px;
+  border: 1px solid var(--accent);
+  background: transparent;
+  color: var(--text-light);
+  display: inline-block;
+  transition: var(--transition);
+}
+
+.back-btn:hover {
+  background: var(--accent);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* ==== Footer ==== */
+footer {
+  background: rgba(15, 23, 42, 0.5);
+  color: var(--text-light);
+  padding: 15px 0;
+  border-top: 1px solid #1e293b;
+  font-size: 14px;
+}

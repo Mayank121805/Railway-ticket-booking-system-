@@ -1,0 +1,11 @@
+TK17711,Mayank karki,22,Delhi,Lucknow,CONFIRMED
+TK17756,Harshita Rathour,22,gujarat,Kotdwar,CONFIRMED
+TK17825,Ayush bisht,22,Delhi,Lalkuan,CONFIRMED
+TK17920,Abhishek Bisht,12,Delhi,Lalkuan,CONFIRMED
+TK17962,Kishan Singh,44,Delhi,Lalkuan,CONFIRMED
+TK17998,Mayank karki,22,Chandigarh,Lalkuan,CONFIRMED
+TK18040,Harshita Rathour,22,Chandigarh,Lalkuan,CONFIRMED
+TK18086,Ayush bisht,22,gujarat,Kotdwar,CONFIRMED
+TK18135,Abhishek Bisht,44,Delhi,Lucknow,CONFIRMED
+TK24616,Abhishek Bisht,55,Chandigarh,Delhi,CONFIRMED
+

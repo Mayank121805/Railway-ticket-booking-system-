@@ -1,0 +1,182 @@
+/* ===== Base Theme Variables (Same as Dashboard but independent) ===== */
+:root {
+  --bg-gradient: linear-gradient(135deg, #0a0f1f, #111827, #1e293b);
+  --card-bg: #111827aa;
+  --card-border: #ffffff18;
+  --text-light: #f1f5f9;
+  --accent: #3b82f6;
+  --accent-soft: #60a5fa;
+  --radius: 18px;
+  --transition: 0.28s ease;
+  --shadow-soft: 0 0 18px rgba(15,23,42,0.7);
+}
+
+/* ===== Reset + Body ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: var(--bg-gradient);
+  min-height: 100vh;
+  color: var(--text-light);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Header ===== */
+header {
+  text-align: center;
+  padding: 25px 0;
+  background: #0f172a80;
+  border-bottom: 1px solid #ffffff20;
+  backdrop-filter: blur(10px);
+}
+
+.header-content {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.train-logo {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  object-fit: cover;
+}
+
+header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+/* ===== Waiting List Box ===== */
+.waiting-check {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+  flex: 1;
+}
+
+.check-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: var(--text-light);
+}
+
+.waiting-box {
+  width: 380px;
+  background: var(--card-bg);
+  padding: 32px;
+  border-radius: var(--radius);
+  border: 1.5px solid var(--card-border);
+  box-shadow: var(--shadow-soft);
+  animation: fadeIn 0.4s ease;
+}
+
+.waiting-title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--text-light);
+}
+
+/* ===== Form ===== */
+.waiting-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.waiting-form label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-light);
+}
+
+.waiting-form input {
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background: #1e293b;
+  color: white;
+  transition: var(--transition);
+}
+
+.waiting-form input:focus {
+  border: 1px solid var(--accent-soft);
+  box-shadow: 0 0 12px #3b82f650;
+}
+
+/* ===== Submit Button ===== */
+.submit-btn {
+  margin-top: 10px;
+  background: var(--accent);
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 0 14px var(--accent-soft);
+  transition: var(--transition);
+}
+
+.submit-btn:hover {
+  background: var(--accent-soft);
+  transform: translateY(-3px);
+}
+
+.back-btn {
+  text-decoration: none;
+  color: white;
+  background: #1e293b;
+  padding: 10px 25px;
+  border-radius: 8px;
+  transition: 0.3s ease;
+  border: 1px solid #3b82f6;
+}
+
+.back-btn:hover {
+  background: #3b82f6;
+  transform: translateY(-3px);
+}
+
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 18px 0;
+  background: #0f172a90;
+  border-top: 1px solid #ffffff20;
+}
+
+/* ===== Fade-in Animation ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Theme Modes (Optional if using theme button externally) ===== */
+:root.light-mode {
+  --bg-gradient: #f1f5f9;
+  --card-bg: #ffffff;
+  --text-light: #111827;
+}
+
+:root.calm-mode {
+  --bg-gradient: #c9e7e2;
+  --card-bg: #ffffffc7;
+}

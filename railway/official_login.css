@@ -1,0 +1,170 @@
+/* ===== Theme Variables ===== */
+:root {
+  --bg-gradient: linear-gradient(135deg, #0a0f1f, #111827, #1e293b);
+  --card-bg: rgba(17, 24, 39, 0.85);
+  --border: #ffffff20;
+  --text: #f1f5f9;
+  --accent: #3b82f6;
+  --accent-soft: #60a5fa;
+}
+
+/* ===== Base ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg-gradient);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Header ===== */
+header {
+  background: #0f172a80;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  padding: 18px 0;
+  text-align: center;
+}
+
+.header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.train-logo {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  object-fit: cover;
+}
+
+header h1 {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+/* ===== Main ===== */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+/* ===== Login Card ===== */
+.login-box {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(14px);
+  padding: 40px 45px;
+  border-radius: 18px;
+  width: 360px;
+  box-shadow: 0 0 35px rgba(59, 130, 246, 0.35);
+  text-align: center;
+}
+
+.login-box h2 {
+  color: var(--accent-soft);
+  margin-bottom: 6px;
+  font-size: 24px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #cbd5f5;
+  margin-bottom: 25px;
+}
+
+/* ===== Inputs ===== */
+.input-group {
+  text-align: left;
+  margin-bottom: 18px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+}
+
+input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #1e293b;
+  color: white;
+  outline: none;
+}
+
+input:focus {
+  border-color: var(--accent);
+}
+
+/* ===== Button ===== */
+.login-btn {
+  width: 100%;
+  margin-top: 12px;
+  padding: 12px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.login-btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 18px rgba(96, 165, 250, 0.8);
+}
+
+/* ===== Back Button ===== */
+.back-btn {
+  display: inline-block;
+  margin-top: 22px;
+  text-decoration: none;
+  color: #cbd5f5;
+  font-size: 14px;
+}
+
+.back-btn:hover {
+  color: var(--accent-soft);
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #0f172a90;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  padding: 14px 0;
+  font-size: 14px;
+  color: #cbd5f5;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 480px) {
+  .login-box {
+    width: 90%;
+    padding: 30px;
+  }
+
+  header h1 {
+    font-size: 20px;
+  }
+}

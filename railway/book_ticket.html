@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Ticket</title>
+  <link rel="stylesheet" href="book.css">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <img src="logo.jpg" alt="Train" class="train-logo">
+      <h1>Book Your Ticket</h1>
+    </div>
+  </header>
+
+  <main>
+    <form action="/cgi-bin/book_ticket.cgi" method="POST" class="ticket-form">
+      <div class="input-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="input-group">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+      </div>
+
+      <div class="input-group">
+        <label for="source">Source:</label>
+        <input type="text" id="source" name="source" required>
+      </div>
+
+      <div class="input-group">
+        <label for="destination">Destination:</label>
+        <input type="text" id="destination" name="destination" required>
+      </div>
+
+      <button type="submit" class="book-btn">🎟️ Book Ticket</button>
+    
+      <a href="dashboard.html" class="back-btn">⬅ Back to Dashboard</a>
+
+    </form>
+  </main>
+  <button class="floating-theme-btn" id="floatingThemeBtn">🌙</button>
+  <footer>
+    <p>© 2025 Railway Booking System | Designed by Mayank</p>
+  </footer>
+
+  <!-- ===== THEME MODE TOGGLE ===== -->
+<script>
+const themeBtn = document.getElementById("floatingThemeBtn");
+const root = document.documentElement;
+let mode = 0;
+
+function updateMode(){
+  root.classList.remove("light-mode","dark-mode","calm-mode");
+  if(mode===0){ root.classList.add("dark-mode"); themeBtn.textContent='🌙'; }
+  else if(mode===1){ root.classList.add("light-mode"); themeBtn.textContent='☀️'; }
+  else { root.classList.add("calm-mode"); themeBtn.textContent='🌿'; }
+}
+
+themeBtn.onclick = ()=> {
+  mode = (mode+1)%3;
+  updateMode();
+};
+
+updateMode();
+</script>
+
+</body>
+</html>
