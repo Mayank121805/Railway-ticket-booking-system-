@@ -65,6 +65,12 @@ cgi-bin/
 - Developed for **Project based learning subject**
 - Not intended for real-world deployment
 
+## Important Note
+**This project uses C with CGI and requires Apache Server.
+Due to GitHub Pages limitations, backend execution is not supported.
+The project must be run locally to view full functionality.**
+
+
 ## Author
 **Mayank Karki**  
 BCA Student
